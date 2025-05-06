@@ -38,7 +38,7 @@ def select_device(device='', batch_size=0):
 
 
 def get_ckpt(ckpt_path):
-    ckpt = torch.load(ckpt_path, map_location='cpu') if ckpt_path else None
+    ckpt = torch.load(ckpt_path, map_location='cpu', weights_only=False) if ckpt_path else None
     return ckpt
 
 
